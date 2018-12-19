@@ -8,7 +8,7 @@ class Window(Frame):
     def init_window(self):
         self.master.title("GUI")
         self.pack(fill = BOTH,expand = 1)
-        quitButton = Button(self, text = "Quit")
+        quitButton = Button(self, text = "Quit",width = "8",height = "4",fg= "green",bg= "black")
         quitButton.place(x=0,y=0)
         enterButton = Button(self,text = "Enter")
         enterButton.place(x=160,y=0)
