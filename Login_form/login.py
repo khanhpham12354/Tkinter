@@ -2,8 +2,9 @@ from tkinter import*
 from tkinter import messagebox
 import os
 import sqlite3 as sql
-data = {}
+import time
 
+data = {}
 def login_init():
 	global app;
 	app = Tk();
@@ -20,6 +21,10 @@ def login_susscues():
 	pwd = password.get().lower();
 	if user_name in data and data[user_name]==pwd:
 		messagebox.showinfo("Success","Successfully!!!")
+		file_path = "access_log.txt";
+		file_log = open(file_path,mode = 'a');
+		file_log.write(user_name.title() + " login at " +  time.ctime() + "\n");
+		file_log.close();
 		app.destroy();
 	else:
 		if user_name not in data:
@@ -65,7 +70,8 @@ def data_init():
 		rows = cur.fetchall();
 		for i in range(0,len(rows)):
 			data[rows[i][1]] = rows[i][2];
-		#print(data)
+		print(data)
+	con.close();
 
 if __name__ == '__main__':
 	data_init();
