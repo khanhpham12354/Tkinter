@@ -15,7 +15,8 @@ data_sex = {}
 data_img = {}
 data_word = {}
 data_translate = {}
-global stt,qus;
+global stt,qus,max_stt;
+max_stt = 10
 stt = 0
 img = [0]
 
@@ -99,10 +100,11 @@ def load_data():
 		print(data_word)
 		print(data_translate)
 	con.close();
-def start():
+def start_question():
 	global stt,qus,question,ans,btn_next,sel,y,ck;
 	stt = stt + 1;
 	load_data();
+	score.set("0/" + str(max_stt));
 	ans = [0,0,0,0];
 	ck = [-1,-1,-1,-1]
 	qus = '';
@@ -209,9 +211,9 @@ def ui_setup():
 	
 	btn_user = Label(frame_2,text =user_name.title(),font=("Times",16,'bold'),padx = 15,pady = 15,anchor = NW,height = 1,width = 20);
 	btn_age = Label(frame_2,text = age,font=("Times",16,'bold'),padx = 15,pady = 15,anchor = NW,height = 1,width = 20);
-	btn_score = Label(frame_2,textvariable = score,font=("Times",16,'bold'),height = 1,width = 20,fg = "blue");
-	btn_time = Label(frame_2,textvariable = xxx,font=("Times",16,'bold'),height = 1,width = 20);
-	btn_dicrect = Button(ui,text = "Start",bg = 'white',activebackground = "pink",font=("Times",16,'bold'),bd = 5,height = 1,width = 10,command = start)
+	btn_score = Label(frame_2,textvariable = score,font=("Times",16,'bold','italic'),height = 1,width = 20,fg = "blue");
+	btn_time = Label(frame_2,textvariable = xxx,font=("Times",16,'bold'),height = 1,width = 20,fg = "#EC870E");
+	btn_dicrect = Button(ui,text = "Start",bg = 'white',activebackground = "pink",font=("Times",16,'bold'),bd = 5,height = 1,width = 10,command = start_question)
 	ckmale = Checkbutton(frame_2, text='Male',font=("Times",16,'bold'),state =DISABLED,onvalue=True,variable = male_var);
 	ckfemale = Checkbutton(frame_2,text = 'Female',font=("Times",16,'bold'),state = DISABLED,onvalue=True,variable = female_var);
 	
@@ -232,7 +234,7 @@ def ui_setup():
 	lbl_score.grid(row = 4,column = 0);
 	btn_score.grid(row = 4,column = 2);
 	btn_dicrect.place(x = 520,y = 350);
-	lbl_name = Label(ui,text = "Code and design by Pham Duc Khanh",fg = "#00CC00",font=("Times",12,'italic'));
+	lbl_name = Label(ui,text = "Code and design by Pham Duc Khanh",fg = "#00CC00",font=("Times",12,'italic','bold'));
 	lbl_name.place(x= 300 ,y = 570)
 def final_question():
 	global y,sel,score_var;
@@ -244,16 +246,17 @@ def final_question():
 	if sel.get() == y:
 		print("correct");
 		score_var = score_var + 1;
-		score.set(str(score_var) + "/" + str(len(data_word)));
+		score.set(str(score_var) + "/" + str(max_stt));
 	else:
 		print("incorrect");
 		ck[sel.get()].config(fg ="red");
 		ck[sel.get()].update();
+	result();
 # intit database
 def next_question():
 	global stt,question,y,sel,score_var;
 	stt = stt + 1;
-	if stt <= len(data_word):
+	if stt <= max_stt:
 		btn_next.config(state = NORMAL)
 		btn_next.config(state = DISABLED,activebackground = "white" )
 		btn_next.update();
@@ -263,7 +266,7 @@ def next_question():
 		if sel.get() == y:
 			print("correct");
 			score_var = score_var + 1;
-			score.set(str(score_var) + "/" + str(len(data_word)));
+			score.set(str(score_var) + "/" + str(max_stt));
 		else:
 			print("incorrect");
 			ck[sel.get()].config(fg ="red");
@@ -297,9 +300,8 @@ def hello():
 			time.sleep(1)
 	except:
 		print("Finish!!!")
-
 def limit_time():
-	global minute;
+	global stt;
 	try:
 		second = 59;
 		minute = 9;
@@ -320,6 +322,8 @@ def limit_time():
 		for i in range(0,4):
 			ck[i].config(state = DISABLED);
 			ck[i].update();
+		# result
+		score.set(str(stt) + "/" + str(max_stt)  +"--"+ str(score_var) + "/" + str(stt));
 	except:
 		print("Bye Bye!!!")
 		exit();
@@ -350,7 +354,16 @@ def delay():
 				x1 = random.randint(1,len(data_word))
 			rnd.append(x1)
 			ans[i].set(str(data_translate[str(x1)]))
-
+def result():
+	global score_var,score;
+	if score_var == max_stt:
+		score.set("Excellent! " + str(score_var) + "/" + str(max_stt));
+	elif(score_var > (4*max_stt)/5):
+		score.set("Good " + str(score_var) + "/" + str(max_stt));
+	elif(score_var > max_stt/2):
+		score.set("Medium " + str(score_var) + "/" + str(max_stt));
+	else:
+		score.set("Very Bad!" + str(score_var) + "/" + str(max_stt));
 if __name__ == '__main__':
 	t = Timer(0, hello);
 	t1 = Timer(0,limit_time);
