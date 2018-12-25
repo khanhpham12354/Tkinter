@@ -43,7 +43,7 @@ def login_susscues():
 	user_name = user.get().lower();
 	pwd = password.get().lower();
 	if user_name in data_pwd and data_pwd[user_name]==pwd:
-		messagebox.showinfo("Success","Successfully!!!")
+		#messagebox.showinfo("Success","Successfully!!!")
 		file_path = "access_log.txt";
 		file_log = open(file_path,mode = 'a');
 		file_log.write(user_name.title() + " login at " +  time.ctime() + "\n");
@@ -117,7 +117,7 @@ def start():
 	# random fisrt questtion
 	x = random.randint(1,len(data_word))
 	qus = data_word[str(x)] + " ?"
-	question.set("Question" + " " + str(stt) + ": " + qus);
+	question.set("			Question" + " " + str(stt) + ": " + qus);
 	# random location anwser correct!
 	y = random.randint(0,3);
 	rnd[0] = x;
@@ -136,13 +136,13 @@ def start():
 	btn_dicrect.config(state = DISABLED);
 	frame_3  = Frame(ui);
 	frame_3.place(x = 0 ,y = 400);
-	lbl_question = Label(frame_3,textvariable = question,font=("Times",16,'bold'));
+	lbl_question = Label(frame_3,textvariable = question,font=("Times",16,'bold'),justify = RIGHT);
 	ck[0] = Radiobutton(frame_3,value=0,variable = sel,textvariable = ans[0],font=("Times",16,'bold'),justify = LEFT,anchor = NW,height = 1,width = 20);
 	ck[1] = Radiobutton(frame_3,value=1,variable = sel,textvariable = ans[1],font=("Times",16,'bold'),justify = LEFT,anchor = W,height = 1,width = 20);
 	ck[2] = Radiobutton(frame_3,value=2,variable = sel,textvariable = ans[2] ,font=("Times",16,'bold'),justify = LEFT,anchor = W,height = 1,width = 20);
 	ck[3] = Radiobutton(frame_3,value=3,variable = sel,textvariable = ans[3],font=("Times",16,'bold'),justify = LEFT,anchor = NW,height = 2,width = 20);
 
-	lbl_question.grid(row = 0,column = 0,columnspan = 2);
+	lbl_question.grid(row = 0,column = 0);
 	frame_3.grid_columnconfigure(0,minsize = 400)
 	frame_3.grid_columnconfigure(1,minsize = 400)
 	frame_3.grid_rowconfigure(1,minsize = 100)
@@ -168,16 +168,18 @@ def ui_init():
 	ui.protocol("WM_DELETE_WINDOW",quit)
 	#ui.iconbitmap();
 def ui_setup():
-	global male_var,female_var,age,img_path,score,sel,btn_dicrect,btn_time,xxx,dir_rect,lbl_direct;
+	global score_var,male_var,female_var,age,img_path,score,sel,btn_dicrect,btn_time,xxx,dir_rect,lbl_direct;
+	score_var = 0;
 	sel = IntVar();
 	sel.set(0)
 	xxx = StringVar();
 	score = StringVar();
+	score.set("None");
 	age = StringVar();
 	dir_rect = StringVar();
-	age = data_age[user_name];
 	male_var = BooleanVar();
 	female_var = BooleanVar();
+	age = data_age[user_name];
 	img[0] = ImageTk.PhotoImage(Image.open(data_img[user_name]));
 	img_path = img[0];
 	dir_rect.set("Please press next button to run!")
@@ -207,7 +209,7 @@ def ui_setup():
 	
 	btn_user = Label(frame_2,text =user_name.title(),font=("Times",16,'bold'),padx = 15,pady = 15,anchor = NW,height = 1,width = 20);
 	btn_age = Label(frame_2,text = age,font=("Times",16,'bold'),padx = 15,pady = 15,anchor = NW,height = 1,width = 20);
-	btn_score = Label(frame_2,text = score,font=("Times",16,'bold'),height = 1,width = 20);
+	btn_score = Label(frame_2,textvariable = score,font=("Times",16,'bold'),height = 1,width = 20,fg = "blue");
 	btn_time = Label(frame_2,textvariable = xxx,font=("Times",16,'bold'),height = 1,width = 20);
 	btn_dicrect = Button(ui,text = "Start",bg = 'white',activebackground = "pink",font=("Times",16,'bold'),bd = 5,height = 1,width = 10,command = start)
 	ckmale = Checkbutton(frame_2, text='Male',font=("Times",16,'bold'),state =DISABLED,onvalue=True,variable = male_var);
@@ -230,49 +232,46 @@ def ui_setup():
 	lbl_score.grid(row = 4,column = 0);
 	btn_score.grid(row = 4,column = 2);
 	btn_dicrect.place(x = 520,y = 350);
-		
+	lbl_name = Label(ui,text = "Code and design by Pham Duc Khanh",fg = "#00CC00",font=("Times",12,'italic'));
+	lbl_name.place(x= 300 ,y = 570)
+def final_question():
+	global y,sel,score_var;
+	btn_next.config(state = DISABLED,activebackground = "white" )
+	btn_next.update();
+	print(sel.get())
+	ck[y].config(fg = "green")
+	ck[y].update()
+	if sel.get() == y:
+		print("correct");
+		score_var = score_var + 1;
+		score.set(str(score_var) + "/" + str(len(data_word)));
+	else:
+		print("incorrect");
+		ck[sel.get()].config(fg ="red");
+		ck[sel.get()].update();
 # intit database
 def next_question():
-	global stt,question,y,sel;
+	global stt,question,y,sel,score_var;
 	stt = stt + 1;
 	if stt <= len(data_word):
 		btn_next.config(state = NORMAL)
-		btn_next.config(state = DISABLED)
+		btn_next.config(state = DISABLED,activebackground = "white" )
+		btn_next.update();
 		print(sel.get())
 		ck[y].config(fg = "green")
 		ck[y].update()
 		if sel.get() == y:
 			print("correct");
+			score_var = score_var + 1;
+			score.set(str(score_var) + "/" + str(len(data_word)));
 		else:
 			print("incorrect");
 			ck[sel.get()].config(fg ="red");
 			ck[sel.get()].update();
-		time.sleep(1);
-
-		ck[y].config(fg = "black");
-		ck[sel.get()].config(fg = "black");
-		sel.set(-1)
-		btn_next.config(state = NORMAL)
-		rnd = [0,0,0,0]
-		x = random.randint(1,len(data_word))
-		qus = data_word[str(x)] + " ?"
-		question.set("Question" + " " + str(stt) + ": " + qus);
-		# random location anwser correct!
-		y = random.randint(0,3);
-		rnd[0] = x;
-		for i in range(0,4):
-			#  anwser correct
-			if i == y:
-				ans[i].set(str(data_translate[str(x)]));
-			else:
-			#incorrect
-				x1 = random.randint(1,len(data_word))
-				while x1 in rnd:
-					x1 = random.randint(1,len(data_word))
-				rnd.append(x1)
-				ans[i].set(str(data_translate[str(x1)]))
+		t2 = Timer(0,delay)
+		t2.start();	
 	else:
-		btn_next.config(state = DISABLED)
+		final_question();
 def data_init():
 	path  = os.path.dirname(__file__) + "\\data_user.db";
 	con = sql.connect(path);
@@ -298,7 +297,9 @@ def hello():
 			time.sleep(1)
 	except:
 		print("Finish!!!")
+
 def limit_time():
+	global minute;
 	try:
 		second = 59;
 		minute = 9;
@@ -313,13 +314,47 @@ def limit_time():
 			time.sleep(1);
 		lbl_direct.config(fg = "red");
 		dir_rect.set("Times:          Timeout!!!");
-		btn_next.config(state = DISABLED)
+		# timeout 
+		btn_next.config(state = DISABLED,activebackground = "white" )
+		btn_next.update();
+		for i in range(0,4):
+			ck[i].config(state = DISABLED);
+			ck[i].update();
 	except:
 		print("Bye Bye!!!")
 		exit();
+def delay():
+	global question,y,sel,score_var;
+	time.sleep(2);
+	sel.set(-1)
+	for i in range(0,4):
+		ck[i].config(fg = "black");
+		ck[i].update();
+	btn_next.config(state = NORMAL,activebackground = "white")
+	btn_next.update();
+	rnd = [0,0,0,0]
+	x = random.randint(1,len(data_word))
+	qus = data_word[str(x)] + " ?"
+	question.set("			Question" + " " + str(stt) + ": " + qus);
+	# random location anwser correct!
+	y = random.randint(0,3);
+	rnd[0] = x;
+	for i in range(0,4):
+			#  anwser correct
+		if i == y:
+			ans[i].set(str(data_translate[str(x)]));
+		else:
+			#incorrect
+			x1 = random.randint(1,len(data_word))
+			while x1 in rnd:
+				x1 = random.randint(1,len(data_word))
+			rnd.append(x1)
+			ans[i].set(str(data_translate[str(x1)]))
+
 if __name__ == '__main__':
 	t = Timer(0, hello);
 	t1 = Timer(0,limit_time);
+	t2 = Timer(0,delay)
 	data_init();
 	login_init();
 	login_setup();
