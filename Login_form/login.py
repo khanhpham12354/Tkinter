@@ -16,7 +16,7 @@ data_img = {}
 data_word = {}
 data_translate = {}
 global stt,qus,max_stt;
-max_stt = 3
+max_stt = 50
 stt = 0
 img = [0]
 
@@ -26,7 +26,7 @@ def login_init():
 	app.title("Login");
 	app.geometry("400x150+420+270");
 	app.resizable(height= False,width = False);
-	app.iconbitmap("photos/lcd.ico");
+	app.iconbitmap("photos/k.ico");
 	app.protocol("WM_DELETE_WINDOW",quit)
 def quit():
 	 x = messagebox.askokcancel("Quit","Do you want to quit?");
@@ -37,7 +37,8 @@ def quit():
 	 	try:
 	 		ui.destroy();
 	 	except:
-	 		pass
+	 		print("khong co");
+	 	app.destroy();
 	 	exit();
 def login_susscues():
 	global user_name,times1; 
@@ -88,7 +89,7 @@ def login_setup():
 	frame_3.grid(row = 0,column = 1);
 	btn_quit.grid(row = 0,column = 2);
 def load_data():
-	path  = os.path.dirname(__file__) + "\\data_newword.db";
+	path  = "data_newword.db";
 	con = sql.connect(path);
 	with con:
 		cur  = con.cursor();
@@ -164,11 +165,11 @@ def start_question():
 def ui_init():
 	global ui;
 	ui = Tk();
-	ui.title("Resum");
+	ui.title("English");
 	ui.resizable(height = False,width = False);
 	ui.geometry("800x600");
 	ui.protocol("WM_DELETE_WINDOW",quit)
-	#ui.iconbitmap();
+	ui.iconbitmap("photos/k.ico");
 def ui_setup():
 	global score_var,male_var,female_var,age,img_path,score,sel,btn_dicrect,btn_time,xxx,dir_rect,lbl_direct;
 	score_var = 0;
@@ -281,7 +282,7 @@ def next_question():
 	else:
 		final_question();
 def data_init():
-	path  = os.path.dirname(__file__) + "\\data_user.db";
+	path  = "data_user.db";
 	con = sql.connect(path);
 	with con:
 		cur  = con.cursor();
@@ -292,10 +293,6 @@ def data_init():
 			data_age[rows[i][1]] = rows[i][3];
 			data_sex[rows[i][1]] = rows[i][4];
 			data_img[rows[i][1]] = rows[i][5];
-		# print(data_pwd)
-		# print(data_age)
-		# print(data_sex)
-		# print(data_img)
 	con.close();
 def hello():
 	try:
@@ -329,6 +326,11 @@ def limit_time():
 			ck[i].update();
 		# result
 		score.set(str(stt) + "/" + str(max_stt)  +"--"+ str(score_var) + "/" + str(stt));
+		file_path = "progress\\" + str(user_name) + str(".txt");
+		file_progress = open(file_path,mode = 'a');
+		now = datetime.datetime.now();
+		file_progress.write("Timeout " + str(now.hour) + ":" + str(now.minute) + ":" + str(now.second) + "--" + str(now.day) + ":" + str(now.month) + ":" + str(now.year) +": "+ str(score.get()) + "\n");
+		file_progress.close();
 	except:
 		print("Bye Bye!!!")
 		exit();
