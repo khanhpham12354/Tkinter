@@ -16,7 +16,7 @@ data_img = {}
 data_word = {}
 data_translate = {}
 global stt,qus,max_stt;
-max_stt = 10
+max_stt = 3
 stt = 0
 img = [0]
 
@@ -157,7 +157,7 @@ def start_question():
 	ck[3].grid(row = 2,column = 1);
 
 	btn_next = Button(ui,state = NORMAL,bg = 'white',text = "Next",activebackground = "green",font=("Times",16,'bold'),bd = 5,height = 1,width = 10,command = next_question);
-	btn_next.place(x = 650, y =500)
+	btn_next.place(x = 650, y =520)
 	lbl_direct.config(fg = "green");
 	t1.start();
 
@@ -252,6 +252,11 @@ def final_question():
 		ck[sel.get()].config(fg ="red");
 		ck[sel.get()].update();
 	result();
+	file_path = "progress\\" + str(user_name) + str(".txt");
+	file_progress = open(file_path,mode = 'a');
+	now = datetime.datetime.now();
+	file_progress.write(str(now.hour) + ":" + str(now.minute) + ":" + str(now.second) + "--" + str(now.day) + ":" + str(now.month) + ":" + str(now.year) +": "+ str(score.get()) + "\n");
+	file_progress.close();
 # intit database
 def next_question():
 	global stt,question,y,sel,score_var;
