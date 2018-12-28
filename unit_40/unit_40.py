@@ -1,10 +1,5 @@
-from tkinter import*
-class Window(Frame):
-    def __init__(self, master = None):
-        Frame.__init__(self,master);
-        self.master = master;
-root = Tk();
-app = Window(root);
-
-root.mainloop();
-
+from playsound import playsound
+from gtts import gTTS
+# tts = gTTS(text='book', lang='en')
+# tts.save("good.mp3")
+playsound("good.mp3")

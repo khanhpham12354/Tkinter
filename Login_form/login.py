@@ -7,6 +7,8 @@ import datetime
 from PIL import ImageTk,Image
 from threading import*
 import random
+from gtts import gTTS
+from playsound import playsound
 
 check_status = True
 data_pwd = {}
@@ -19,7 +21,9 @@ global stt,qus,max_stt;
 max_stt = 50
 stt = 0
 img = [0]
-
+'''
+	init form origant
+'''
 def login_init():
 	global app;
 	app = Tk();
@@ -38,7 +42,10 @@ def quit():
 	 		ui.destroy();
 	 	except:
 	 		print("khong co");
-	 	app.destroy();
+	 	try:
+	 		app.destroy();
+	 	except:
+	 		print("khong co");
 	 	exit();
 def login_susscues():
 	global user_name,times1; 
@@ -46,7 +53,7 @@ def login_susscues():
 	pwd = password.get().lower();
 	if user_name in data_pwd and data_pwd[user_name]==pwd:
 		#messagebox.showinfo("Success","Successfully!!!")
-		file_path = "access_log.txt";
+		file_path = "log\\access_log.txt";
 		file_log = open(file_path,mode = 'a');
 		file_log.write(user_name.title() + " login at " +  time.ctime() + "\n");
 		file_log.close();
@@ -89,7 +96,7 @@ def login_setup():
 	frame_3.grid(row = 0,column = 1);
 	btn_quit.grid(row = 0,column = 2);
 def load_data():
-	path  = "data_newword.db";
+	path  = "database\\data_newword.db";
 	con = sql.connect(path);
 	with con:
 		cur  = con.cursor();
@@ -161,7 +168,6 @@ def start_question():
 	btn_next.place(x = 650, y =520)
 	lbl_direct.config(fg = "green");
 	t1.start();
-
 def ui_init():
 	global ui;
 	ui = Tk();
@@ -246,10 +252,14 @@ def final_question():
 	ck[y].update()
 	if sel.get() == y:
 		print("correct");
+		t3 = Timer(0,correct);
+		t3.start();
 		score_var = score_var + 1;
 		score.set(str(score_var) + "/" + str(max_stt));
 	else:
 		print("incorrect");
+		t4 = Timer(0,incorrect);
+		t4.start();
 		ck[sel.get()].config(fg ="red");
 		ck[sel.get()].update();
 	result();
@@ -271,10 +281,14 @@ def next_question():
 		ck[y].update()
 		if sel.get() == y:
 			print("correct");
+			t3 = Timer(0,correct);
+			t3.start();			
 			score_var = score_var + 1;
 			score.set(str(score_var) + "/" + str(max_stt));
 		else:
 			print("incorrect");
+			t4 = Timer(0,incorrect);
+			t4.start();			
 			ck[sel.get()].config(fg ="red");
 			ck[sel.get()].update();
 		t2 = Timer(0,delay)
@@ -282,7 +296,7 @@ def next_question():
 	else:
 		final_question();
 def data_init():
-	path  = "data_user.db";
+	path  = "database\\data_user.db";
 	con = sql.connect(path);
 	with con:
 		cur  = con.cursor();
@@ -371,6 +385,10 @@ def result():
 		score.set("Medium " + str(score_var) + "/" + str(max_stt));
 	else:
 		score.set("Very Bad!" + str(score_var) + "/" + str(max_stt));
+def correct():
+	playsound("audio\\ting_correct.wav");
+def incorrect():
+	playsound("audio\\incorrect.wav")
 if __name__ == '__main__':
 	t = Timer(0, hello);
 	t1 = Timer(0,limit_time);
