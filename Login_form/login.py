@@ -18,7 +18,7 @@ data_img = {}
 data_word = {}
 data_translate = {}
 global stt,qus,max_stt;
-max_stt = 50
+max_stt = 200
 stt = 0
 img = [0]
 '''
@@ -52,7 +52,6 @@ def login_susscues():
 	user_name = user.get().lower();
 	pwd = password.get().lower();
 	if user_name in data_pwd and data_pwd[user_name]==pwd:
-		#messagebox.showinfo("Success","Successfully!!!")
 		file_path = "log\\access_log.txt";
 		file_log = open(file_path,mode = 'a');
 		file_log.write(user_name.title() + " login at " +  time.ctime() + "\n");
@@ -100,7 +99,7 @@ def load_data():
 	con = sql.connect(path);
 	with con:
 		cur  = con.cursor();
-		cur.execute("SELECT* FROM data_main");
+		cur.execute("SELECT* FROM data123");
 		rows = cur.fetchall();
 		for i in range(1,len(rows)+ 1):
 			data_word[str(i)] = rows[i-1][1];
@@ -350,7 +349,7 @@ def limit_time():
 		exit();
 def delay():
 	global question,y,sel,score_var;
-	time.sleep(2);
+	time.sleep(1.5);
 	sel.set(-1)
 	for i in range(0,4):
 		ck[i].config(fg = "black");

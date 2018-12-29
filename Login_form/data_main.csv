@@ -1,251 +1,426 @@
-﻿stt,word,translate
-1,Exceed,vượt
-2,regular,thường xuyên
-3,desert,món tráng miệng
-4,assure,đảm bảo
-5,flexible,linh hoạt
-6,preferable,phù hợp
-7,collected,thu thập
-8,materials,"tài liệu,vật liệu"
-9,congestion,tắc nghẽn
-10,manufactures,nhà sản xuất
-11,investigators,điều tra viên
-12,regulation,quy định
-13,complied with,tuân theo
-14,quantities,số lượng
-15,opcupants,chiếm đóng
-16,precaution,ngăn ngừa
-17,risk,rủi ro
-18,injury,thương tật
-19,terminate,loại bỏ
-20,exchange,trao đổi
-21,compared,so sánh
-22,previous,trước
-23,retained,giữ lại
-24,race,chủng tộc
-25,mayor,thị trưởng
-26,predicts,dự đoán
-27,variety of,đa dạng
-28,private,riêng tư
-29,relocation,di dời
-30,in advance,trước
-31,effiency,hiệu quả
-32,surface,bề mặt
-33,reimbursement,hoàn trả
-34,accompanied,đính kèm
-35,receipt,chấp nhận
-36,subtantial,đáng kể
-37,suppose,giả sử
-38,admit,thừa nhận
-39,afford,có khả năng
-40,corresponded,tương ứng
-41,functioned,chức năng
-42,enrolled,ghi danh
-43,cooperation,hợp tác
-44,allocation,phân công
-45,separation,tách biệt
-46,error,lỗi
-47,disease,bệnh
-48,implemented,thực hiện
-49,immigration,người nhập cư
-50,description,bản mô tả
-51,compliment,khen ngợi
-52,shortage,thiếu hụt
-53,property,tài sản
-54,dagame,thiệt hại
-55,insurance,bảo hiểm
-56,procedure,thủ tục
-57,occasion,nhân dịp
-58,attribute,cho rằng
-59,primarily,chính
-60,extensive,chuyên sâu
-61,consumer,người tiêu dùng
-62,persuade,thuyết phục
-63,combine,kết hợp
-64,estimate,ước tính
-65,version,phiên bản
-66,damage,hỏng hóc
-67,caused,gây ra
-68,overhead,vượt quá
-69,explain,giải thích
-70,property,tài sản
-71,opportunity,cơ hội
-72,investors,nhà đầu tư
-73,ingredients,thành phần
-74,authoritative,ủy quyền
-75,fluently,trôi chảy
-76,efficency,hiệu quả
-77,engines,động cơ
-78,accumulation,tích lũy
-79,copyright,bản quyền
-80,impress,ấn tượng
-81,landlord,chủ nhà
-82,lease,"hợp đồng,thuê"
-83,appeared,xuất hiện
-84,invoice,hóa đơn
-85,instructed,hướng dẫn
-86,recognized,nhận dạng
-87,collaborating,cộng tác
-88,urban,thành thị
-89,rural,nông thôn
-90,standards,tiêu chuẩn
-91,emergency,khẩn cấp
-92,temperature,nhiệt độ
-93,contemporary,hien dai
-94,sudden,đột ngột
-95,reasonable,phù hợp
-96,agency,đại lý cơ quan
-97,primary,chính
-98,security,bảo mật
-99,laboratories,phòng thí nghiệm
-100,identical,xác minh
-101,satisfied,hài lòng
-102,commute,việc đi lại
-103,acknowledged,thừa nhận
-104,specified,cụ thể
-105,collapse,sụp đổ
-106,regret,hối tiếc
-107,retailer,nhà bán lẻ
-108,maintenance,bảo trì
-109,discovered,khám phá
-110,resolved,giải quyết lại
-111,invertigative,điều tra
-112,susended,trì trệ
-113,released,ra mắt
-114,assemble,lắp ráp
-115,ingredients,thành phần
-116,real estate,bất động sản
-117,appeared,xuất hiện
-118,broadcast,phát sống
-119,consistently,liên tiếp
-120,respectively,tương ứng
-121,recorded,bản ghi âm
-122,oversee,giám sát
-123,praised,ca ngợi
-124,relocation,di dời
-125,interest,quan tâm
-126,position,vị trí
-127,enjoy,thích
-128,interview,phỏng vấn
-129,executive,giám đốc điều hành
-130,review,xem xét
-131,resume,sơ yếu lý lịch
-132,decide,quyết định
-133,notice,thông báo
-134,contract,hợp đồng
-135,apprximately,xấp xỉ
-136,look forward,mong chờ
-137,remind,nhắc lại
-138,annual,hàng năm
-139,held,tổ chức
-140,provide,cung cấp
-141,associate,hội viên
-142,bring,"mang,vác"
-143,sign up,đăng ký
-144,celebrate,lễ kỷ niệm
-145,achieve,thành tựu
-146,retire,nghỉ hưu
-147,responsible,chịu trách nhiệm
-148,merger,sát nhập
-149,contribute,đóng góp
-150,human resource,nguồn nhân sự
-151,additional,thêm
-152,follow,theo dõi
-153,special,đặc biệt
-154,discount,giảm giá
-155,arrange,sắp xếp
-156,appointment,cuộc hẹn
-157,in advance,trước
-158,staff,nhân viên
-159,regular,thường xuyên
-160,reduce,giảm giá
-161,energy,năng lượng
-162,advantage,lợi thế
-163,perform,thực hiện
-164,official,chính thức
-165,instead of,thay vì
-166,schedule,lịch trình
-167,acount,tài khoản
-168,department,"bộ phần,phòng ban"
-169,change,thay đổi
-170,determine,xác định
-171,normal,bình thường
-172,hardly,hiếm khi
-173,weaknesses,điểm yếu
-174,admire,ngưỡng
-175,appropriate,thích hợp
-176,preference,sở thích
-177,collection,bộ sưu tập
-178,committee,ủy ban
-179,clinic,phóm khám
-180,comprehensive,toàn diện
-181,approached,tiếp cận
-182,distribute,phân phối
-183,withdrawals,rút tiền
-184,necessary,cần thiết
-185,reward,phần thưởng
-186,solution,giải pháp
-187,routine,thường lệ
-188,debating,tranh luận
-189,outdated,lỗi thời
-190,demolishes,phá hủy
-191,inspection,kiểm tra
-192,warehouse,nhà kho
-193,preserves,bảo quản
-194,political,chính trị
-195,endition,ấn bản
-196,entire,toàn bộ
-197,approved,được phê duyệt
-198,accustomed,quen thuộc
-199,tentative,dự kiến
-200,mutually,lẫn nhau
-201,absolutely,hoàn toàn
-202,reluctantly,miễn cưỡng
-203,donors,đóng góp
-204,restoration,phục hồi
-205,interns,thực tập
-206,conducted,tiến hành
-207,revealed,tiết lộ
-208,inventory,hàng tồn kho
-209,nationwide,toàn quốc
-210,convinced,thuyết phục
-211,circulated,lưu hành
-212,brochure,tập tài liệu
-213,negotiations,thương lượng
-214,demonstrated,chứng minh
-215,layout,bố cục
-216,relatively,tương đối
-217,overtime,làm thêm giờ
-218,grant,trợ cấp
-219,independent,độc lập
-220,consumption,tiêu thụ
-221,depart,khởi hành
-222,sustainable,bền vững
-223,affixed,gắn
-224,generated,tạo ra
-225,contain,chứa đựng
-226,accurate,chính xác
-227,resulted,kết quả
-228,devices,thiết bị
-229,indentified,xác định
-230,guests,khách
-231,vendors,nhà cung cấp
-232,confident,tự tin
-233,accommodate,thích hợp
-234,extend,mở rộng
-235,grocery store,cửa hàng tạp hóa
-236,admired,ngưỡng mộ
-237,malfunction,trục trặc
-238,inserted, chèn vào
-239,incorrectly,không chính xác
-240,component,thành phần
-241,forecast,dự báo
-242,investigation,điều tra
-243,assurances,bảo đảm
-244,prove,chứng minh
-245,patient,bệnh nhân
-246,attracts,thu hút
-247,exterior,bên ngoài
-248,privacy,bảo mật
-249,decade,thập kỷ
-250,waste,lãng phí
+	word	translate
+1	Exceed	v??t
+2	regular	th??ng xuy�n
+3	desert	m�n tr�ng mi?ng
+4	assure	??m b?o
+5	flexible	linh ho?t
+6	preferable	ph� h?p
+7	collected	thu th?p
+8	materials	"t�i li?u,v?t li?u"
+9	congestion	t?c ngh?n
+10	manufactures	nh� s?n xu?t
+11	investigators	?i?u tra vi�n
+12	regulation	quy ??nh
+13	complied with	tu�n theo
+14	quantities	s? l??ng
+15	opcupants	chi?m ?�ng
+16	precaution	ng?n ng?a
+17	risk	r?i ro
+18	injury	th??ng t?t
+19	terminate	lo?i b?
+20	exchange	trao ??i
+21	compared	so s�nh
+22	previous	tr??c
+23	retained	gi? l?i
+24	race	ch?ng t?c
+25	mayor	th? tr??ng
+26	predicts	d? ?o�n
+27	variety of	?a d?ng
+28	private	ri�ng t?
+29	relocation	di d?i
+30	in advance	tr??c
+31	effiency	hi?u qu?
+32	surface	b? m?t
+33	reimbursement	ho�n tr?
+34	accompanied	?�nh k�m
+35	receipt	ch?p nh?n
+36	subtantial	?�ng k?
+37	suppose	gi? s?
+38	admit	th?a nh?n
+39	afford	c� kh? n?ng
+40	corresponded	t??ng ?ng
+41	functioned	ch?c n?ng
+42	enrolled	ghi danh
+43	cooperation	h?p t�c
+44	allocation	ph�n c�ng
+45	separation	t�ch bi?t
+46	error	l?i
+47	disease	b?nh
+48	implemented	th?c hi?n
+49	immigration	ng??i nh?p c?
+50	description	b?n m� t?
+51	compliment	khen ng?i
+52	shortage	thi?u h?t
+53	property	t�i s?n
+54	dagame	thi?t h?i
+55	insurance	b?o hi?m
+56	procedure	th? t?c
+57	occasion	nh�n d?p
+58	attribute	cho r?ng
+59	primarily	ch�nh
+60	extensive	chuy�n s�u
+61	consumer	ng??i ti�u d�ng
+62	persuade	thuy?t ph?c
+63	combine	k?t h?p
+64	estimate	??c t�nh
+65	version	phi�n b?n
+66	damage	h?ng h�c
+67	caused	g�y ra
+68	overhead	v??t qu�
+69	explain	gi?i th�ch
+70	opportunity	c? h?i
+71	investors	nh� ??u t?
+72	ingredients	th�nh ph?n
+73	authoritative	?y quy?n
+74	fluently	tr�i ch?y
+75	efficency	hi?u qu?
+76	engines	??ng c?
+77	accumulation	t�ch l?y
+78	copyright	b?n quy?n
+79	impress	?n t??ng
+80	landlord	ch? nh�
+81	lease	"h?p ??ng,thu�"
+82	appeared	xu?t hi?n
+83	invoice	h�a ??n
+84	instructed	h??ng d?n
+85	recognized	nh?n d?ng
+86	collaborating	c?ng t�c
+87	urban	th�nh th?
+88	rural	n�ng th�n
+89	standards	ti�u chu?n
+90	emergency	kh?n c?p
+91	temperature	nhi?t ??
+92	contemporary	hi?n ??i
+93	sudden	??t ng?t
+94	reasonable	ph� h?p
+95	agency	??i l� c? quan
+96	primary	ch�nh
+97	security	b?o m?t
+98	laboratories	ph�ng th� nghi?m
+99	identical	x�c minh
+100	satisfied	h�i l�ng
+101	commute	vi?c ?i l?i
+102	acknowledged	th?a nh?n
+103	specified	c? th?
+104	collapse	s?p ??
+105	regret	h?i ti?c
+106	retailer	nh� b�n l?
+107	maintenance	b?o tr�
+108	discovered	kh�m ph�
+109	resolved	gi?i quy?t l?i
+110	invertigative	?i?u tra
+111	susended	tr� tr?
+112	released	ra m?t
+113	assemble	l?p r�p
+114	real estate	b?t ??ng s?n
+115	broadcast	ph�t s?ng
+116	consistently	li�n ti?p
+117	respectively	t??ng ?ng
+118	recorded	b?n ghi �m
+119	oversee	gi�m s�t
+120	praised	ca ng?i
+121	interest	quan t�m
+122	position	v? tr�
+123	enjoy	th�ch
+124	interview	ph?ng v?n
+125	executive	gi�m ??c ?i?u h�nh
+126	review	xem x�t
+127	resume	s? y?u l� l?ch
+128	decide	quy?t ??nh
+129	notice	th�ng b�o
+130	contract	h?p ??ng
+131	apprximately	x?p x?
+132	look forward	mong ch?
+133	remind	nh?c l?i
+134	annual	h�ng n?m
+135	held	t? ch?c
+136	provide	cung c?p
+137	associate	h?i vi�n
+138	bring	"mang,v�c"
+139	sign up	??ng k�
+140	celebrate	l? k? ni?m
+141	achieve	th�nh t?u
+142	retire	ngh? h?u
+143	responsible	ch?u tr�ch nhi?m
+144	merger	s�t nh?p
+145	contribute	?�ng g�p
+146	human resource	ngu?n nh�n s?
+147	additional	th�m
+148	follow	theo d�i
+149	special	??c bi?t
+150	discount	gi?m gi�
+151	arrange	s?p x?p
+152	appointment	cu?c h?n
+153	staff	nh�n vi�n
+154	reduce	gi?m gi�
+155	energy	n?ng l??ng
+156	advantage	l?i th?
+157	perform	th?c hi?n
+158	official	ch�nh th?c
+159	instead of	thay v�
+160	schedule	l?ch tr�nh
+161	acount	t�i kho?n
+162	department	"b? ph?n,ph�ng ban"
+163	change	thay ??i
+164	determine	x�c ??nh
+165	normal	b�nh th??ng
+166	hardly	hi?m khi
+167	weaknesses	?i?m y?u
+168	admire	ng??ng
+169	appropriate	th�ch h?p
+170	preference	s? th�ch
+171	collection	b? s?u t?p
+172	committee	?y ban
+173	clinic	ph�m kh�m
+174	comprehensive	to�n di?n
+175	approached	ti?p c?n
+176	distribute	ph�n ph?i
+177	withdrawals	r�t ti?n
+178	necessary	c?n thi?t
+179	reward	ph?n th??ng
+180	solution	gi?i ph�p
+181	routine	th??ng l?
+182	debating	tranh lu?n
+183	outdated	l?i th?i
+184	demolishes	ph� h?y
+185	inspection	ki?m tra
+186	warehouse	nh� kho
+187	preserves	b?o qu?n
+188	political	ch�nh tr?
+189	endition	?n b?n
+190	entire	to�n b?
+191	approved	???c ph� duy?t
+192	accustomed	quen thu?c
+193	tentative	d? ki?n
+194	mutually	l?n nhau
+195	absolutely	ho�n to�n
+196	reluctantly	mi?n c??ng
+197	donors	?�ng g�p
+198	restoration	ph?c h?i
+199	interns	th?c t?p
+200	conducted	ti?n h�nh
+201	revealed	ti?t l?
+202	inventory	h�ng t?n kho
+203	nationwide	to�n qu?c
+204	convinced	thuy?t ph?c
+205	circulated	l?u h�nh
+206	brochure	t?p t�i li?u
+207	negotiations	th??ng l??ng
+208	demonstrated	ch?ng minh
+209	layout	b? c?c
+210	relatively	t??ng ??i
+211	overtime	l�m th�m gi?
+212	grant	tr? c?p
+213	independent	??c l?p
+214	consumption	ti�u th?
+215	depart	kh?i h�nh
+216	sustainable	b?n v?ng
+217	affixed	g?n
+218	generated	t?o ra
+219	contain	ch?a ??ng
+220	accurate	ch�nh x�c
+221	resulted	k?t qu?
+222	devices	thi?t b?
+223	indentified	x�c ??nh
+224	guests	kh�ch
+225	vendors	nh� cung c?p
+226	confident	t? tin
+227	accommodate	th�ch h?p
+228	extend	m? r?ng
+229	grocery store	c?a h�ng t?p h�a
+230	admired	ng??ng m?
+231	malfunction	tr?c tr?c
+232	inserted	ch�n v�o
+233	incorrectly	kh�ng ch�nh x�c
+234	component	th�nh ph?n
+235	forecast	d? b�o
+236	investigation	?i?u tra
+237	assurances	b?o ??m
+238	prove	ch?ng minh
+239	patient	b?nh nh�n
+240	attracts	thu h�t
+241	exterior	b�n ngo�i
+242	privacy	b?o m?t
+243	decade	th?p k?
+244	waste	l�ng ph�
+245	across	"qua,b?ng qua"
+246	physicians	b�c s?
+247	delicuos	ngon
+248	convent	ph�t minh
+249	encouraged	khuy?n kh�ch
+250	community	c?ng ??ng
+251	negative	ti�u c?c
+252	caused 	g�y ra
+253	revenues	doanh thu
+254	peak season	m�a cao ?i?m
+255	compare	so s�nh
+256	negotiators	?�m ph�n
+257	significant	?�ng k?
+258	occupancy	"chi?m, ?�ng"
+259	competition	cu?c thi
+260	disposable	lo?i b?
+261	numreous	?a d?ng
+262	expired	h?t h?n
+263	anonymous	d??ng �
+264	accomplishment	th�nh t?u
+265	recovery	ph?c h?i
+266	vacancy	"v? tr�, thi?u h?t"
+267	productivity	n?ng su?t
+268	demonstated	 ch?ng minh
+269	occasions	d?p
+270	dedicated	c?ng hi?n
+271	eligible	?? ?i?u ki?n
+272	figure	"s? li?u, h�nh, nh�n v?t"
+273	preservation	b?o t?n
+274	debate	tranh lu?n
+275	complicated	ph?c t?p
+276	acquiring	mua l?i
+277	field 	l?nh v?c
+278	proven	?a� ???c ch?ng minh
+279	generators	m�y ph�t
+280	suitable	ph� h?p
+281	widespread	lan tr�n
+282	cautious	th?n tr?ng
+283	underwent	tr?i qua
+284	courteous	l?ch s?
+285	influenced	?nh h??ng
+286	manually	th? c�ng
+287	insecurely	kh�ng an to�n
+288	destination	?i?m ??n
+289	observation	quan s�t
+290	laundry	gi?t kh�
+291	generations	th? h?
+292	escorting	s?p x?p
+293	apparel	trang ph?c
+294	demaged	thi?t h?i
+295	operations	ho?t ??ng
+296	resumed	ti?p t?c
+297	licenses	gi?y ph�p
+298	inclines	t? ch?i
+299	attempts	n? l?c
+300	unique	??c ?�o
+301	hesitate	do d?
+302	assume	gi? ??nh
+303	against	ch?ng l?i
+304	potencially	ti?m n?ng
+305	dangerous	nguy hi?m
+306	spread of	r?ng r�i
+307	comsumption	ti�u th?
+308	respective	t??ng ?ng
+309	pick up	nh?t l�n
+310	take a break	ngh? ng?i 1 l�t
+311	tune	?i?u ch?nh
+312	institation	to? ch?c
+313	relief	s? thay ??i
+314	fold	g?p l?i
+315	substatial	?�ng k?
+316	renewal	??i m?i
+317	adverse effect	?nh h??ng x?u
+318	various impact	t�c ??ng kh�c nhau
+319	promote	"qu?ng c�o, ??y m?nh"
+320	article	b�i abos
+321	route	tuy?n ???ng
+322	agent	nh�n vi�n
+323	attendant	ng??i ph?c v?
+324	waiter	b?i b�n
+325	implement	ti?n h�nh
+326	journey	nh� b�o
+327	banquet	ti?c ??ng
+328	except	ngo?i tr?
+329	salesperson	ng??i b�n h�ng
+330	lobby	ti?n s?nh
+331	sign 	"bi?u hi?n, k� t�n"
+332	in charge of	ch?u tr�ch nhi?m
+333	colleage	??ng nghi?p
+334	on business	?i c�ng t�c
+335	construction	x�y d?ng
+336	presentation	b�i thuy?t tr�nh
+337	instruction	chi? d?n
+338	corner	g�c
+339	as soon as	ngay khi
+340	receptionist	l? t�n
+341	nearly 	g?n nh?
+342	safety deposit	k�t an to�n
+343	fitness	"th? d?c, th? h�nh"
+344	calculating	t�nh to�n
+345	somewhat complex	ho?i ph?c t?p
+346	verify	x�c minh
+347	resistance	kh�ng c?
+348	division	b? ph?n
+349	waterfull	th�c n??c
+350	purchase	mua   
+351	branch	chi nh�nh
+352	short staffed	thi?u nh�n vi�n
+353	replace	thay th?
+354	fix	s?a ch?a
+355	proof	chu?ng c?
+356	warranty	b?o h�nh
+357	speech	b�i ph�t bi?u
+358	speaker	di?n gi?
+359	real easte	b?t ??ng s?n
+360	guest	kh�ch
+361	occupation	ngh? nghi?p
+362	maintaince	b?o tr�
+363	factory	nh� m�y
+364	clerk	nh�n vi�n
+365	imply	ngu? �
+366	represent	??i di?n
+367	introduce	gi?i thi?u
+368	tenant	ng??i thu� nh�
+369	conversation	cu?c h?i tho?i
+370	most likely	c� kh? n?ng nh?t
+371	supply store	c?a h�ng b�ch h�a
+372	raise	t?ng l??ng
+373	recommend	"?? ngh?, khuy?n kh�ch"
+374	charity	t? thi?n
+375	sponsor	t? thi?n
+376	revise	ch?nh s?a
+377	approve	ph� duy?t
+378	decorate	trang tr�
+379	postpone	tr� ho�n
+380	improve	c?i thi?n
+381	landscape	l�m v??n
+382	sculture	?i�u kh?c
+383	recognize	nh�?n ra
+384	aircraft	m�y bay
+385	transportation	ph??ng ti?n v?n chuy?n
+386	renovate	n�ng c?p
+387	guide	s�ch h??ng d?n
+388	cart	xe ??y
+389	boat	thuy?n
+390	lader	thang
+391	wheelbarrow	xe c�t k�t
+392	sink	b?n r?a tay
+393	bench	gh? d�i
+394	point at	ch? v�o
+395	put on	"?eo, m?c, ??i"
+396	casting a shadow	tr?i b�ng
+397	push	??y
+398	instument	"d?ng c?, nh?c c?"
+399	merchandise	h�ng h�a
+400	jewellery	trang s?c
+401	examine	xem x�t
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
