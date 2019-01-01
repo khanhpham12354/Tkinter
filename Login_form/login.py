@@ -7,7 +7,6 @@ import datetime
 from PIL import ImageTk,Image
 from threading import*
 import random
-from gtts import gTTS
 from playsound import playsound
 
 check_status = True
@@ -103,6 +102,8 @@ def load_data():
 		rows = cur.fetchall();
 		for i in range(1,len(rows)+ 1):
 			data_word[str(i)] = rows[i-1][1];
+			# speak = gTTS(text = data_word[str(i)], lang='en', slow=False)
+			# speak.save("speak\\" + str(data_word[str(i)]) + ".mp3")
 			data_translate[str(i)] = rows[i-1][2];
 		print(data_word)
 		print(data_translate)
@@ -125,8 +126,10 @@ def start_question():
 	rnd = [0,0,0,0]
 	# random fisrt questtion
 	x = random.randint(1,len(data_word))
-	qus = data_word[str(x)] + " ?"
-	question.set("			Question" + " " + str(stt) + ": " + qus);
+	qus = data_word[str(x)];
+	question.set("			Question" + " " + str(stt) + ": " + qus + " ?");
+	path_sp = "speak\\" + str(qus) + ".mp3"
+	playsound(path_sp)
 	# random location anwser correct!
 	y = random.randint(0,3);
 	rnd[0] = x;
@@ -358,8 +361,10 @@ def delay():
 	btn_next.update();
 	rnd = [0,0,0,0]
 	x = random.randint(1,len(data_word))
-	qus = data_word[str(x)] + " ?"
-	question.set("			Question" + " " + str(stt) + ": " + qus);
+	qus = data_word[str(x)]
+	question.set("			Question" + " " + str(stt) + ": " + qus  + " ?");
+	path_sp = "speak\\" + str(qus) + ".mp3"
+	playsound(path_sp)
 	# random location anwser correct!
 	y = random.randint(0,3);
 	rnd[0] = x;
