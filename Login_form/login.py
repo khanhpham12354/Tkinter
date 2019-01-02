@@ -1,4 +1,5 @@
 from tkinter import*
+from tkinter import ttk
 from tkinter import messagebox
 import os
 import sqlite3 as sql
@@ -8,6 +9,7 @@ from PIL import ImageTk,Image
 from threading import*
 import random
 from playsound import playsound
+from gtts import gTTS
 
 check_status = True
 data_pwd = {}
@@ -17,7 +19,7 @@ data_img = {}
 data_word = {}
 data_translate = {}
 global stt,qus,max_stt;
-max_stt = 200
+max_stt = 125
 stt = 0
 img = [0]
 '''
@@ -102,14 +104,15 @@ def load_data():
 		rows = cur.fetchall();
 		for i in range(1,len(rows)+ 1):
 			data_word[str(i)] = rows[i-1][1];
-			# speak = gTTS(text = data_word[str(i)], lang='en', slow=False)
-			# speak.save("speak\\" + str(data_word[str(i)]) + ".mp3")
 			data_translate[str(i)] = rows[i-1][2];
+			if (os.path.isfile("speak\\" + str(data_word[str(i)]) + ".mp3")==False):
+				speak = gTTS(text = data_word[str(i)], lang='en', slow=False)
+				speak.save("speak\\" + str(data_word[str(i)]) + ".mp3")
 		print(data_word)
 		print(data_translate)
-	con.close();
+	con.close();	
 def start_question():
-	global stt,qus,question,ans,btn_next,sel,y,ck;
+	global stt,qus,question,ans,btn_next,sel,y,ck,progressbar;
 	stt = stt + 1;
 	load_data();
 	score.set("0/" + str(max_stt));
@@ -168,6 +171,9 @@ def start_question():
 
 	btn_next = Button(ui,state = NORMAL,bg = 'white',text = "Next",activebackground = "green",font=("Times",16,'bold'),bd = 5,height = 1,width = 10,command = next_question);
 	btn_next.place(x = 650, y =520)
+	progressbar = ttk.Progressbar(ui,mode='determinate',orient="horizontal", length= max_stt*4 + 5,value = 0,maximum = 125)
+	progressbar.place(x = 125 ,y = 535);
+	progressbar.step(1);
 	lbl_direct.config(fg = "green");
 	t1.start();
 def ui_init():
@@ -246,7 +252,8 @@ def ui_setup():
 	lbl_name = Label(ui,text = "Code and design by Pham Duc Khanh",fg = "#00CC00",font=("Times",12,'italic','bold'));
 	lbl_name.place(x= 300 ,y = 570)
 def final_question():
-	global y,sel,score_var;
+	global y,sel,score_var,progressbar;
+	progressbar.step(1);
 	btn_next.config(state = DISABLED,activebackground = "white" )
 	btn_next.update();
 	print(sel.get())
@@ -272,8 +279,9 @@ def final_question():
 	file_progress.close();
 # intit database
 def next_question():
-	global stt,question,y,sel,score_var;
+	global stt,question,y,sel,score_var,progressbar;
 	stt = stt + 1;
+	progressbar.step(1);
 	if stt <= max_stt:
 		btn_next.config(state = NORMAL)
 		btn_next.config(state = DISABLED,activebackground = "white" )
